@@ -81,7 +81,7 @@ const App = () => {
   }, [gameIsOver])
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={window.location.pathname || ''} >
       <Routes>
         <Route exact path="/" element={<NewGame 
           setPlayer1mark={setPlayer1mark}
