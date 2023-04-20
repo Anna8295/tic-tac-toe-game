@@ -71,7 +71,6 @@ const App = () => {
   useEffect(() => {
     checkScore()
     setPlayer1mark(player1mark)
-    // eslint-disable-next-line
   }, [cells, player1mark])
 
   useEffect(() => {
@@ -81,7 +80,7 @@ const App = () => {
   }, [gameIsOver])
 
   return (
-    <BrowserRouter basename={window.location.pathname || ''} >
+    <BrowserRouter >
       <Routes>
         <Route exact path="/" element={<NewGame 
           setPlayer1mark={setPlayer1mark}
