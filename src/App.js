@@ -71,6 +71,7 @@ const App = () => {
   useEffect(() => {
     checkScore()
     setPlayer1mark(player1mark)
+    // eslint-disable-next-line
   }, [cells, player1mark])
 
   useEffect(() => {
