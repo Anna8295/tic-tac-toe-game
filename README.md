@@ -1,13 +1,15 @@
 
 # Tic Tac Toe Game
 
-This code is for a Tic-Tac-Toe game using React. Players can choose their game piece ('X' or 'O') and play as many rounds as they like. It manages the state of the game board and player moves. The user interface allows players to make moves and displays the game score.
+A Tic-Tac-Toe game built with React. Pick your mark ('X' or 'O') and play as many rounds as you like, in three modes:
 
+- **Vs CPU** — play against the computer with three difficulty levels: easy, medium, and hard (hard uses minimax and never loses).
+- **Vs player** — two players sharing the same computer.
+- **Online (vs friend)** — create a room, share the 5-letter code with a friend, and play from separate computers. The connection is made browser-to-browser with WebRTC (PeerJS), so no game server is needed.
 
 ## Demo
 
 https://anna8295.github.io/tic-tac-toe-game/
-
 
 ## Run Locally
 
@@ -19,27 +21,34 @@ Install dependencies
   npm install
 ```
 
-Start the server
+Start the dev server
 
 ```bash
   npm start
 ```
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in your browser.
+
+Open the URL Vite prints (http://localhost:5173/tic-tac-toe-game/) in your browser.
+
+Run the tests
+
+```bash
+  npm test
+```
+
+Deploy to GitHub Pages
+
+```bash
+  npm run deploy
+```
+
 ## Tech Stack
 
-- React 
-- Tailwind 
-
-
-## Lessons Learned
-
-Using Tailwind for styling was a new experience for me, and it allowed me to quickly create a visually appealing and responsive UI for my Tic-Tac-Toe game.
-Organizing my code into reusable components helped me write more efficient and maintainable code, which will be valuable in future React projects
+- React + Vite
+- Tailwind CSS
+- React Router (hash routing, so it works on GitHub Pages)
+- PeerJS (WebRTC) for online multiplayer
+- Vitest for the game-logic and CPU tests
 
 ## Acknowledgements
 
  - [The design and idea are taken from: frontendmentor.io](https://www.frontendmentor.io/challenges/tic-tac-toe-game-Re7ZF_E2v)
-
-
-

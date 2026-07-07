@@ -1,4 +1,6 @@
-import GameStart from "./GameStart";
-import NewGame from "./NewGame";
+import Game from './Game'
+import Menu from './Menu'
+import OnlineGame from './OnlineGame'
+import OnlineLobby from './OnlineLobby'
 
-export { GameStart, NewGame }
+export { Game, Menu, OnlineGame, OnlineLobby }
