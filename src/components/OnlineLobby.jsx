@@ -22,7 +22,7 @@ const OnlineLobby = () => {
 
   return (
     <div className={styles.fullScreen}>
-      <div className={`${styles.centering} w-[327px] sm:w-[460px] gap-6`}>
+      <div className={`${styles.centering} w-[327px] sm:w-[460px] gap-6 animate-riseIn`}>
         <img src={logo} alt="logo" />
         <MarkPicker title="pick your mark" sign={sign} onChange={setSign} />
         <button

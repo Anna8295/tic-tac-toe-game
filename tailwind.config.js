@@ -28,6 +28,32 @@ export default {
       screens: {
         xs: "450px",
       },
+      keyframes: {
+        pop: {
+          '0%': { transform: 'scale(0.4)', opacity: '0' },
+          '70%': { transform: 'scale(1.12)', opacity: '1' },
+          '100%': { transform: 'scale(1)' },
+        },
+        riseIn: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        winBounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '30%': { transform: 'translateY(-10px)' },
+          '60%': { transform: 'translateY(2px)' },
+        },
+      },
+      animation: {
+        pop: 'pop 0.25s ease-out both',
+        riseIn: 'riseIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both',
+        fadeIn: 'fadeIn 0.25s ease-out both',
+        winBounce: 'winBounce 0.55s ease-in-out 2',
+      },
     },
   },
   plugins: [],

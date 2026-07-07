@@ -13,18 +13,18 @@ const Menu = () => {
 
   return (
     <div className={styles.fullScreen}>
-      <div className={`${styles.centering} w-[327px] sm:w-[460px] gap-6`}>
+      <div className={`${styles.centering} w-[327px] sm:w-[460px] gap-6 animate-riseIn`}>
         <img src={logo} alt="logo" />
         <MarkPicker sign={sign} onChange={setSign} />
 
         {pickingDifficulty ? (
-          <div className={`${styles.centering} w-full gap-3`}>
+          <div className={`${styles.centering} w-full gap-3 animate-fadeIn`}>
             <p className="text-silver text-[14px]">pick the cpu difficulty</p>
             <div className="w-full grid grid-cols-3 gap-3">
               {DIFFICULTIES.map((difficulty) => (
                 <button
                   key={difficulty}
-                  className="bg-lightYellow shadow-yellowSmall hover:bg-lightYellowHover text-darkNavy rounded-xl py-3 text-[14px] sm:text-[16px]"
+                  className={`bg-lightYellow shadow-yellowSmall hover:bg-lightYellowHover text-darkNavy rounded-xl py-3 text-[14px] sm:text-[16px] ${styles.pressSmall}`}
                   onClick={() =>
                     navigate(`/game?mode=cpu&difficulty=${difficulty}&p1=${sign}`)
                   }

@@ -11,21 +11,21 @@ const Cell = ({ value, hoverSign, isWinning, onClick }) => {
 
   return (
     <button
-      className="bg-semiDarkNavy w-[96px] sm:w-[140px] h-[96px] sm:h-[140px] flex items-center justify-center rounded-xl shadow-dark"
+      className="bg-semiDarkNavy w-[96px] sm:w-[140px] h-[96px] sm:h-[140px] flex items-center justify-center rounded-xl shadow-dark transition-all duration-100 active:translate-y-1 active:shadow-none"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
     >
       {!value && isHovered && hoverSign && (
         <img
-          className="pointer-events-none"
+          className="pointer-events-none animate-fadeIn"
           src={icons[hoverSign].outline}
           alt={hoverSign}
         />
       )}
       {value && (
         <img
-          className="pointer-events-none"
+          className={`pointer-events-none ${isWinning ? 'animate-winBounce' : 'animate-pop'}`}
           src={isWinning ? icons[value].outline : icons[value].filled}
           alt={value}
         />

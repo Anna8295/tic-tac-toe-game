@@ -140,7 +140,7 @@ const OnlineGame = () => {
 
 const Screen = ({ children }) => (
   <div className={styles.fullScreen}>
-    <div className={`${styles.centering} w-[327px] sm:w-[460px] gap-6 text-silver`}>
+    <div className={`${styles.centering} w-[327px] sm:w-[460px] gap-6 text-silver animate-riseIn`}>
       {children}
     </div>
   </div>
